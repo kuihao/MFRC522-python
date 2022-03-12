@@ -52,6 +52,8 @@ while continue_reading:
 
         # Print UID
         print("Card read UID: "+str(uid[0])+","+str(uid[1])+","+str(uid[2])+","+str(uid[3]))
+        print("Card read UID (Serial Number) in Hex.:\n %s,%s,%s,%s" % \
+             (hex(uid[0])[2:], hex(uid[1])[2:], hex(uid[2])[2:], hex(uid[3])[2:]))
     
         # This is the default key for authentication
         key = [0xFF,0xFF,0xFF,0xFF,0xFF,0xFF]
