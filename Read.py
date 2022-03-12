@@ -61,7 +61,9 @@ while continue_reading:
     if status == MIFAREReader.MI_OK:
 
         # Print UID
-        print("Card read UID: %s,%s,%s,%s" % (uid[0], uid[1], uid[2], uid[3]))
+        print("Card read UID (Serial Number):\n %s,%s,%s,%s" % (uid[0], uid[1], uid[2], uid[3]))
+        print("Card read UID (Serial Number) in Hex.:\n %s,%s,%s,%s" % \
+             (hex(uid[0])[2:], hex(uid[1])[2:], hex(uid[2])[2:], hex(uid[3])[2:]))
     
         # This is the default key for authentication
         key = [0xFF,0xFF,0xFF,0xFF,0xFF,0xFF]
