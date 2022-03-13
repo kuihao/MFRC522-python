@@ -56,11 +56,12 @@ while continue_reading:
              (hex(uid[0])[2:], hex(uid[1])[2:], hex(uid[2])[2:], hex(uid[3])[2:]))
     
         # This is the default key for authentication
-        key = [0xFF,0xFF,0xFF,0xFF,0xFF,0xFF]
+        #key = [0xFF,0xFF,0xFF,0xFF,0xFF,0xFF]
         
         # Select the scanned tag
         MIFAREReader.MFRC522_SelectTag(uid)
 
+        '''
         # Authenticate
         status = MIFAREReader.MFRC522_Auth(MIFAREReader.PICC_AUTHENT1A, 8, key, uid)
 
@@ -76,3 +77,4 @@ while continue_reading:
             GPIO.output(LED1,GPIO.HIGH)
             time.sleep(0.5)
             GPIO.output(LED1,GPIO.LOW)
+        '''
